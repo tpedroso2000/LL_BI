@@ -43,9 +43,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WITTY_WATER_096C68110 }}
           repo_token:           ${{ secrets.GITHUB_TOKEN }}
           action:               upload
-          app_location:         "/"            # onde mora o package.json
-          output_location:      "build"        # pasta que acabou de gerar
-          skip_app_build:       true           # pula o build interno do Oryx
+          app_location:         "build"          # pasta de saída do 'npm run build'
+          output_location:      ""               # deve ficar vazio quando skip_app_build:true
+          skip_app_build:       true             # pula o build interno do Oryx
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
