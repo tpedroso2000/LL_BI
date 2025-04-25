@@ -1,0 +1,340 @@
+/* Importa as fontes se necessário */
+/* @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Montserrat:wght@400;700&display=swap'); */
+
+/* Reset básico */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Faixa vermelha no topo */
+.top-red-bar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  width: 100%;
+  background-color: #e30316;
+  min-height: 70px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+/* Informação da última carga de dados */
+.last-data-load {
+  text-align: right;
+  font-size: 12px;
+  color: #888;
+  margin: 5px 20px 10px 0;
+}
+
+/* Cabeçalho (logo + títulos) */
+.analise-campanhas-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.analise-campanhas-logo {
+  width: 120px;
+  height: auto;
+}
+
+.analise-campanhas-title-group {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+ 
+.analise-campanhas-main-title {
+  margin: 0;
+  font-size: 56px;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.analise-campanhas-year-title {
+  margin: 5px 0 0;
+  font-size: 40px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Container geral */
+.analise-campanhas-container {
+  padding: 10px;
+  font-family: sans-serif;
+  /* Para uniformizar o espaçamento vertical entre seções */
+  margin: 10px 0;
+}
+
+/* Filtros e KPI review lado a lado */
+.filtros-e-kpi-review {
+  display: flex;
+  gap: 10px;  /* Reduzido de 20px */
+  margin-bottom: 10px;  /* Espaçamento inferior uniforme */
+  flex-wrap: wrap;
+}
+
+/* Seção de Filtros */
+.filters-section {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+.filters-section h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.filters-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filters-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filters-group h4 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.checkbox-label,
+.radio-label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Seção KPI review */
+.kpi-review-section {
+  flex: 2;
+  min-width: 400px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.kpi-review-title {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.kpi-review-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* KPI items (usando Barlow) */
+.kpi-items-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.kpi-item {
+  flex: 1;
+  border: 1px solid #eee;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #fff;
+  font-family: 'Barlow', sans-serif;
+}
+
+.kpi-item-label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: 'Barlow', sans-serif;
+}
+
+.kpi-item-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Barlow', sans-serif;
+}
+
+/* Gráfico de Linhas */
+.kpi-review-chart {
+  width: 100%;
+  height: 350px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-chart-placeholder {
+  background: linear-gradient(135deg, #eee 25%, transparent 25%) repeat;
+  background-size: 20px 20px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom Tooltip para o gráfico */
+.custom-tooltip {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: 'Barlow', sans-serif;
+}
+
+.custom-tooltip .label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.custom-tooltip .intro {
+  margin: 0;
+}
+
+.custom-tooltip .desc {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Tabela do Relatório (usando Barlow) */
+.analise-campanhas-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  font-family: 'Barlow', sans-serif;
+}
+
+.analise-campanhas-table thead tr.cabecalho {
+  background-color: #ccc;
+}
+
+.analise-campanhas-th {
+  padding: 8px;
+  text-align: left;
+}
+
+.analise-campanhas-th-right {
+  text-align: center;
+  min-width: 80px;
+}
+
+.metrica-col {
+  min-width: 97px;
+}
+
+.analise-campanhas-faixa-canal {
+  height: 10px;
+  padding: 0;
+}
+
+.analise-campanhas-canal-label {
+  padding: 8px;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #fff;
+}
+
+.analise-campanhas-metrica-label {
+  padding: 8px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.analise-campanhas-celula-valor {
+  padding: 8px;
+  text-align: right;
+  background-color: #fff;
+  color: #000;
+}
+
+.analise-campanhas-celula-var {
+  padding: 8px;
+  text-align: center;
+  font-size: 0.9em;
+  background-color: #fff;
+  color: #000;
+  border-left: 2px solid #d5d5d5 !important;
+  border-right: 2px solid #d5d5d5 !important;
+}
+
+.negative {
+  color: red !important;
+}
+
+.analise-campanhas-linha-total td {
+  background-color: #eee;
+  font-weight: bold;
+  color: #000;
+}
+
+.analise-campanhas-total {
+  font-weight: bold;
+}
+
+/* Ajustes para os Cards dos Gráficos Comparativos */
+.charts-comparison-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;  /* Espaçamento superior uniforme */
+  margin-bottom: 10px; /* Espaçamento inferior uniforme */
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.chart-card {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 0 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-card-title {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  text-align: center;
+  color: #333;
+}
+
+.chart-card-inner {
+  flex: 1;
+  height: 350px; /* Altura fixa */
+  width: 100%;
+}
+
+ 
+/* Espaçamento uniforme entre seções adicionais */
+.section-spacing {
+  margin: 10px 0;
+}
+ 
